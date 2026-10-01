@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, LayoutDashboard, Wrench, TicketCheck, LogOut } from 'lucide-react';
+import { X, LayoutDashboard, Wrench, Ticket, LogOut } from 'lucide-react';
 import { clientEquipment, supportTickets } from '../data/mockData';
 
 export default function ClientPortal({ setIsPortalOpen, isLoggedIn, setIsLoggedIn }) {
@@ -39,7 +39,7 @@ export default function ClientPortal({ setIsPortalOpen, isLoggedIn, setIsLoggedI
             <Wrench size={20} /> <span className="font-medium">My Equipment</span>
           </button>
           <button onClick={() => setActiveTab('tickets')} className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${activeTab === 'tickets' ? 'bg-blue-50 text-[#3478B4]' : 'text-gray-600 hover:bg-gray-100'}`}>
-            <TicketCheck size={20} /> <span className="font-medium">Support Tickets</span>
+            <Ticket size={20} /> <span className="font-medium">Support Tickets</span>
           </button>
         </div>
         <div className="p-4 border-t border-gray-200 hidden md:block">
